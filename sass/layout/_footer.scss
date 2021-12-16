@@ -1,0 +1,20 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $second-bg-color;
+
+  &__wrapper {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.footer-left {
+  width: 231px;
+  margin-right: 70px;
+  @import "../components/footer-logo";
+  @import "../components/footer-address";
+}
+
+@import "../components/footer-social";
+@import "../components/footer-subscribe";

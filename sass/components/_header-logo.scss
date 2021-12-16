@@ -1,0 +1,13 @@
+.header-logo {
+  @extend .logo;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  &__link {
+    color: $logo-accent-color;
+
+    &--color-black {
+      color: $logo-header-text-color;
+    }
+  }
+}

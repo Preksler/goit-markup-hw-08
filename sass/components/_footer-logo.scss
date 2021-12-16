@@ -1,0 +1,13 @@
+.footer-logo {
+  @extend .logo;
+  padding: 0;
+  margin-bottom: 20px;
+
+  &__link {
+    color: $logo-accent-color;
+
+    &--color-white {
+      color: $logo-footer-text-color;
+    }
+  }
+}

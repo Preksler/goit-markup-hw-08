@@ -1,0 +1,14 @@
+.header {
+  background-color: $main-bg-color;
+  border-bottom: 1px solid $header-border-color;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+@import "../components/logo";
+@import "../components/header-logo";
+@import "../components/header-navigation";
+@import "../components/header-connect";

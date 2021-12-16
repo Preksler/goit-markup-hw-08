@@ -1,0 +1,6 @@
+// Transition animation
+@mixin TransitionProperty($property...) {
+  transition-property: $property;
+  transition-duration: $timing-duration;
+  transition-timing-function: $timing-fanction;
+}

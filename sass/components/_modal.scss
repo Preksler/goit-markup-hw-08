@@ -1,0 +1,229 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $modal-backdrop-bg;
+
+  @include TransitionProperty(opacity, visibility);
+
+  &.is-hidden {
+    & .modal {
+      transform: translate(-50%, -50%) scale(0.1);
+      border-radius: 50%;
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 528px;
+  min-height: 581px;
+  padding: 40px;
+  transform: translate(-50%, -50%) scale(1);
+
+  @include TransitionProperty(transform, border-radius);
+
+  background-color: $modal-bg-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  &__close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    @include TransitionProperty(fill);
+
+    &:hover,
+    &:focus {
+      fill: $accent-color;
+    }
+
+    &--icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $title-text-color;
+  }
+
+  &__lable {
+    display: block;
+    margin-bottom: 4px;
+
+    color: $text-color;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+  }
+
+  &__icon {
+    &--wrapper {
+      position: relative;
+      display: block;
+    }
+  }
+}
+
+.modal-form {
+  &__input {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    margin-bottom: 10px;
+
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    outline: none;
+
+    color: $text-color;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    @include TransitionProperty(border);
+
+    &:focus {
+      border: 1px solid $accent-color;
+    }
+
+    &--icon {
+      position: absolute;
+      top: 20px;
+      left: 12px;
+      fill: currentColor;
+      width: 18px;
+      height: 18px;
+
+      transform: translateY(-50%);
+
+      @include TransitionProperty(fill);
+    }
+
+    &:focus + &--icon {
+      fill: $accent-color;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid $input-border-color;
+    border-radius: 4px;
+    outline: none;
+
+    color: $text-color;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    @include TransitionProperty(border);
+
+    &:focus {
+      border: 1px solid $accent-color;
+    }
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+  }
+}
+
+.modal-form {
+  &__agreement {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__checkbox {
+    &--icon {
+      margin-right: 7px;
+      width: 16px;
+      height: 15px;
+      border: 2px solid $checkbox-border-color;
+      border-radius: 2px;
+      background-color: transparent;
+
+      @include TransitionProperty(background-color, border);
+    }
+
+    &:checked + &--icon {
+      background-color: $checkbox-bg-color;
+      background-origin: border-box;
+      border-color: transparent;
+    }
+
+    &:hover + &--icon,
+    &:focus + &--icon {
+      border: 2px solid $accent-color;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    color: $text-color;
+  }
+
+  &__link {
+    text-decoration-line: underline;
+    text-decoration-skip-ink: none;
+    color: $accent-color;
+  }
+}
+
+.modal-form {
+  &__btn {
+    @extend %button;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 55px;
+
+    &:hover,
+    &:focus {
+      background-color: $btn-bg-color-hover;
+    }
+  }
+}

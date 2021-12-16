@@ -1,0 +1,36 @@
+.footer-address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  &__item {
+    margin-bottom: 9px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    color: $text-footer-contact-color;
+
+    @include TransitionProperty(color);
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+
+    &--maps {
+      color: $primary-white-color;
+
+      @include TransitionProperty(color);
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+      }
+    }
+  }
+}
