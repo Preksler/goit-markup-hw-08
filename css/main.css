@@ -39,11 +39,30 @@ body {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+  outline: 1px solid red;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 .visually-hidden {
@@ -79,33 +98,6 @@ body {
   transition-property: background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.socials {
-  display: flex;
-  justify-content: center;
-}
-
-.socials__item {
-  margin-right: 10px;
-}
-
-.socials__item:last-child {
-  margin-right: 0;
-}
-
-.socials__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-}
-
-.socials__icon {
-  width: 20px;
-  height: 20px;
 }
 
 .header {
@@ -271,9 +263,16 @@ body {
 }
 
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
   background-color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .feature__title, .work__title, .team__title, .clients__title, .portfolio__title {
@@ -286,16 +285,33 @@ body {
 }
 
 .feature__list {
-  display: flex;
+  margin-bottom: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .feature__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .feature__item {
-  flex-basis: calc((100% - 3 * 30px) / 4);
-  margin-right: 30px;
+  margin-bottom: 30px;
 }
 
-.feature__item:last-child {
-  margin-right: 0;
+@media screen and (min-width: 768px) {
+  .feature__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .feature__item {
+    flex-basis: calc(100% / 4 - 30px);
+    margin: 15px;
+  }
 }
 
 .feature__background {
@@ -304,7 +320,7 @@ body {
   background: #f5f4fa;
   border-radius: 4px;
   margin-bottom: 30px;
-  padding: 25px 100px;
+  padding: 25px 0;
 }
 
 .feature__icon {
@@ -315,6 +331,7 @@ body {
 .feature__lable {
   margin-bottom: 10px;
   color: #212121;
+  text-align: center;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
