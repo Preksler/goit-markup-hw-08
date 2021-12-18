@@ -275,7 +275,7 @@ body {
   }
 }
 
-.feature__title, .work__title, .team__title, .clients__title, .portfolio__title {
+.feature__title, .team__title, .clients__title, .portfolio__title {
   margin-bottom: 50px;
   color: #212121;
   font-size: 36px;
@@ -356,40 +356,51 @@ body {
   letter-spacing: 0.03em;
 }
 
-.work {
-  padding-top: 0;
+@media screen and (max-width: 1199px) {
+  .work {
+    display: none;
+  }
 }
 
-.work__list {
-  display: flex;
-}
-
-.work__item {
-  position: relative;
-  flex-basis: calc((100% - 2 * 30px) / 3);
-  margin-right: 30px;
-}
-
-.work__item:last-child {
-  margin-right: 0;
-}
-
-.work__wrapper {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  padding: 27px 0;
-  background-color: rgba(47, 48, 58, 0.8);
-}
-
-.work__text {
-  font-size: 14px;
-  line-height: 1.14;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #ffffff;
+@media screen and (min-width: 1200px) {
+  .work {
+    padding-top: 0;
+  }
+  .work__title {
+    margin-bottom: 50px;
+    color: #212121;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+  .work__list {
+    display: flex;
+  }
+  .work__item {
+    position: relative;
+    flex-basis: calc((100% - 2 * 30px) / 3);
+    margin-right: 30px;
+  }
+  .work__item:last-child {
+    margin-right: 0;
+  }
+  .work__wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 27px 0;
+    background-color: rgba(47, 48, 58, 0.8);
+  }
+  .work__text {
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
 }
 
 .team {
