@@ -1,15 +1,29 @@
 .header-connect {
-  display: flex;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
   margin-left: auto;
-  align-items: center;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 
   &__item {
-    margin-right: 50px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
+    margin-bottom: 10px;
     &:last-child {
-      margin-right: 0;
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 50px;
+      margin-bottom: 0;
+      padding-top: 32px;
+      padding-bottom: 32px;
+      // }
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
