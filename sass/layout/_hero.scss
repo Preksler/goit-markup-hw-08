@@ -33,7 +33,8 @@
 }
 
 .hero__btn {
-  @extend %button;
+  // @extend %button;
+  @include ButtonStyle;
   padding: 10px 32px;
 
   &:hover,

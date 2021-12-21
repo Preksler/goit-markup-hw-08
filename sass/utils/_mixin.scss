@@ -4,3 +4,25 @@
   transition-duration: $timing-duration;
   transition-timing-function: $timing-fanction;
 }
+// Title text
+@mixin Title($fweight: 700, $fsize: 36px, $lheight: 1.17, $lspacing: 0.03em) {
+  font-weight: $fweight;
+  font-size: $fsize;
+  line-height: $lheight;
+  letter-spacing: $lspacing;
+}
+
+@mixin ButtonStyle() {
+  min-width: 200px;
+  border-radius: 4px;
+  color: $primary-white-color;
+  background-color: $accent-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  @include TransitionProperty(background-color);
+}

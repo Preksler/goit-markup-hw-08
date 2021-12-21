@@ -216,7 +216,8 @@
 
 .modal-form {
   &__btn {
-    @extend %button;
+    // @extend %button;
+    @include ButtonStyle;
     margin-left: auto;
     margin-right: auto;
     padding: 10px 55px;
