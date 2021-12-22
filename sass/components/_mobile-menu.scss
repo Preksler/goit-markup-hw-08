@@ -35,11 +35,11 @@
   }
 }
 
-.mobile-menu {
-  &.is-hidden {
-    transform: translateY(-100%);
-  }
-}
+// .mobile-menu {
+//   &.is-hidden {
+//     transform: translateY(-100%);
+//   }
+// }
 
 .mobile-menu {
   position: fixed;
@@ -51,7 +51,7 @@
   padding-left: 40px;
   top: 0;
   left: 0;
-  @include TransitionProperty(transform);
+  // @include TransitionProperty(transform);
   z-index: 5;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
     0px 1px 3px rgba(0, 0, 0, 0.16);
