@@ -19,10 +19,13 @@
     height: 50px;
     padding-left: 16px;
     outline: none;
+    width: 450px;
+    margin-bottom: 20px;
 
     @media screen and (min-width: 320px) {
-      max-width: 450px;
-      margin-bottom: 20px;
+      @media screen and (max-width: 479px) {
+        width: 200px;
+      }
     }
 
     @media screen and (min-width: 1200px) {

@@ -4,9 +4,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-
   background-color: $modal-backdrop-bg;
-
   @include TransitionProperty(opacity, visibility);
 
   &.is-hidden {
@@ -21,17 +19,20 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
   padding: 40px;
   transform: translate(-50%, -50%) scale(1);
-
   @include TransitionProperty(transform, border-radius);
-
   background-color: $modal-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
 
   &__close {
     position: absolute;
@@ -70,11 +71,15 @@
 
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     letter-spacing: 0.03em;
 
     color: $title-text-color;
+
+    @media screen and (min-width: 1200px) {
+      line-height: 1.15;
+    }
   }
 
   &__lable {
@@ -200,11 +205,16 @@
 
   &__text {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
 
     color: $text-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.71;
+    }
   }
 
   &__link {
@@ -216,7 +226,6 @@
 
 .modal-form {
   &__btn {
-    // @extend %button;
     @include ButtonStyle;
     margin-left: auto;
     margin-right: auto;
