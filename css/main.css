@@ -138,6 +138,9 @@ body {
     margin-bottom: 10px;
     padding: 0;
     background-color: transparent;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
   .open-mobile-menu-btn:hover, .open-mobile-menu-btn:focus {
     fill: #2196f3;
@@ -160,6 +163,9 @@ body {
   right: 15px;
   background-color: transparent;
   fill: #212121;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-mobile-menu-btn:hover, .close-mobile-menu-btn:focus {
@@ -169,6 +175,10 @@ body {
 .close-mobile-menu-btn__icon {
   width: 40px;
   height: 40px;
+}
+
+.header .mobile-menu.is-hidden {
+  transform: translateY(-100%);
 }
 
 .mobile-menu {
@@ -181,6 +191,9 @@ body {
   padding-left: 40px;
   top: 0;
   left: 0;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 5;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
 }
@@ -207,6 +220,9 @@ body {
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: #212121;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-menu__link--current {
@@ -242,6 +258,9 @@ body {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #757575;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-connect__link:hover, .mobile-connect__link:focus {
@@ -252,6 +271,9 @@ body {
   font-size: 34px;
   line-height: 1.18;
   color: #757575;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-connect__link--telephone:hover, .mobile-connect__link--telephone:focus {
