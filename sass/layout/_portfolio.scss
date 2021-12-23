@@ -6,23 +6,48 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
-    flex-basis: calc((100% - 2 * 30px) / 3);
-    margin-right: 30px;
+    max-width: 450px;
     margin-bottom: 30px;
-
     @include TransitionProperty(box-shadow);
+    @media screen and (min-width: 480px) {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      @media screen and (max-width: 1199px) {
+        flex-basis: calc((100% - 30px) / 2);
+        margin-right: 30px;
 
-    &:nth-child(3n) {
-      margin-right: 0;
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        &:nth-last-child(-n + 2) {
+          margin-bottom: 0;
+        }
+      }
     }
 
-    &:nth-last-child(-n + 3) {
-      margin-bottom: 0;
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 2 * 30px) / 3);
+      margin-right: 30px;
+      margin-bottom: 30px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+
+      &:nth-last-child(-n + 3) {
+        margin-bottom: 0;
+      }
     }
 
     &:hover,
@@ -44,24 +69,29 @@
       left: 0;
       width: 100%;
       height: 100%;
-      padding: 63px 24px;
-
+      padding: 77px 24px;
       font-size: 18px;
       line-height: 1.56;
       letter-spacing: 0.03em;
-
+      @media screen and (min-width: 768px) {
+        padding: 49px 24px;
+      }
+      @media screen and (min-width: 768px) {
+        padding: 63px 24px;
+      }
       color: $primary-white-color;
       background-color: rgba(33, 150, 243, 0.9);
-
       transform: translateY(101%);
       opacity: 0;
-
       @include TransitionProperty(transform, opacity);
       /* overflow: auto; */
     }
   }
 
   &__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     &:hover .portfolio__overlay--description,
     &:focus .portfolio__overlay--description {
       transform: translateY(0);
@@ -70,10 +100,11 @@
   }
 
   &__work {
+    flex-grow: 1;
     background: $primary-white-color;
-    border-bottom: 1px solid #eeeeee;
-    border-left: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid $portfolio-border-color;
+    border-left: 1px solid $portfolio-border-color;
+    border-right: 1px solid $portfolio-border-color;
     padding: 20px 24px;
   }
 
