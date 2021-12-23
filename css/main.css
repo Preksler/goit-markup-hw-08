@@ -1350,16 +1350,39 @@ body {
 
 .filter-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .filter-list {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter-list {
+    margin-bottom: 50px;
+  }
 }
 
 .filter-list__item {
   margin-right: 8px;
 }
 
+@media screen and (max-width: 767px) {
+  .filter-list__item {
+    margin-bottom: 15px;
+  }
+}
+
 .filter-list__item:last-child {
   margin-right: 0;
+}
+
+.filter-list__item:nth-last-child(-n + 2) {
+  margin-bottom: 0;
 }
 
 .filter-list__btn {
